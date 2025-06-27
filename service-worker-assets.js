@@ -9,7 +9,7 @@
       "url": "data\/about.json"
     },
     {
-      "hash": "sha256-EvKLiSJhjn4neOttuFbFTyAswICxZLnBEZi+LvMl0R0=",
+      "hash": "sha256-EFeQA4ylm2MHNsHFTrLlazPzNhHgGIws32pm5aCmADA=",
       "url": "data\/education.json"
     },
     {
@@ -29,7 +29,7 @@
       "url": "data\/projects.json"
     },
     {
-      "hash": "sha256-pyBK6jTd7wIdzFGBihgOHxH+lf0pcAXSDknKIJ15Wy8=",
+      "hash": "sha256-GnZwembsgNoJMbxHOotlBbrGUlyduITMTgrh+Figpio=",
       "url": "data\/qualifications.json"
     },
     {
@@ -57,7 +57,7 @@
       "url": "icons\/logos-whatsapp-icon.svg"
     },
     {
-      "hash": "sha256-vGRsZDeIk6C6J92kduOpK+4i+NjAtksuaGsmLt2snR0=",
+      "hash": "sha256-U5cIUgc4b43fGcYhHkLGTflkqqTiQ8rnvyE+89ILLf0=",
       "url": "index.html"
     },
     {
@@ -105,7 +105,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Tg2vqlOfJHeMaPVjfzvGQk0+kU7sATRBqY\/pIyWaRqw=",
+      "hash": "sha256-wiprSII+toNlhnSE\/UnnQVUnsnLzhYGT3eXcakvS9Qc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -173,7 +173,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-SgdkMnYH1cR02cOePpe0js5AEQH6uBFsMxMHg57arx0=",
+      "hash": "sha256-fRyXxgginRRNZdQ9QSIUR0nCdVoNrOvWZsuN7QIVmjQ=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -485,5 +485,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "TIa+P6Ys"
+  "version": "t\/2X\/5ME"
 };
