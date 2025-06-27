@@ -14,7 +14,7 @@
 
         const safeName = iconName.replace(/:/g, '-');
         const img = document.createElement('img');
-        img.src = `/icons/${safeName}.svg`;
+        img.src = `icons/${safeName}.svg`;
         img.alt = iconName;
         img.width = 24;
         img.height = 24;
