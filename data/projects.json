@@ -1,0 +1,10 @@
+[
+  {
+    "name": "WatchableData",
+    "description": "Pacote NuGet para programação reativa",
+    "details": "Constrói observables a partir de objetos que implementam INotifyPropertyChanged, INotifyCollectionChanged ou INotifyDataErrorInfo.",
+    "githubUrl": "https://github.com/incognito201/WatchableData",
+    "nugetUrl": "https://www.nuget.org/packages/WatchableData",
+    "license": "MIT"
+  }
+]

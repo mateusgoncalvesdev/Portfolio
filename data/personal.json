@@ -1,0 +1,13 @@
+{
+  "name": {
+    "fullName": "Mateus Gonçalves Maurício da Costa",
+    "displayName": "Mateus Gonçalves"
+  },
+  "email": "contato.mateusgoncalvesdev@gmail.com",
+  "github": "https://github.com/mateusgoncalvesdev/Portfolio",
+  "birthYear": 1996,
+  "professionalSummary": {
+    "full": "Desenvolvedor Fullstack .NET | Blazor | WPF",
+    "short": "Fullstack .NET"
+  }
+}

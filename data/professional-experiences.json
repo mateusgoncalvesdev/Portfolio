@@ -1,0 +1,30 @@
+﻿[
+  {
+    "startYear": 2023,
+    "endYear": null,
+    "company": "Sued's Grupo",
+    "position": "Programador de Sistemas",
+    "keyResponsibilities": "Desenvolvimento autônomo de plataforma corporativa em C# Blazor, integrando APIs e webservices fiscais. Criação de robôs automatizados para monitoramento e autocorreção de falhas em sistema legado. Implementação de módulos em PHP para geração de SPED Fiscal e EFD Contribuições, criação de algoritmos baseados em histórico para análise e tratamento automático de dados de estoque."
+  },
+  {
+    "startYear": 2020,
+    "endYear": 2021,
+    "company": "Dominus Sistemas Inteligentes",
+    "position": "Desenvolvedor de Sistemas",
+    "keyResponsibilities": "Participação em projetos de sistemas desktop e web, com atuação na coleta, análise e modelagem de dados. Desenvolvimento de funcionalidades sob demanda, correção de falhas e manutenção evolutiva de soluções em nuvem voltadas à gestão empresarial."
+  },
+  {
+    "startYear": 2020,
+    "endYear": 2020,
+    "company": "Diamante Sistemas",
+    "position": "Programador de Sistemas",
+    "keyResponsibilities": "Atuação no suporte técnico a usuários finais e na implantação de sistemas ERP. Responsável pela análise e correção de falhas, otimização de desempenho de bancos de dados (SQL Server, Firebird), migração de dados legados e desenvolvimento de funcionalidades para sistemas desktop e nuvem."
+  },
+  {
+    "startYear": 2018,
+    "endYear": 2018,
+    "company": "Dominus Sistemas Inteligentes",
+    "position": "Auxiliar Técnico de Informática",
+    "keyResponsibilities": "Responsável pela infraestrutura de TI da empresa, incluindo manutenção de servidores e redes. Auxílio no desenvolvimento de soluções personalizadas, suporte técnico remoto e presencial, e atendimento a chamados com foco na resolução ágil de problemas de software e hardware."
+  }
+]
