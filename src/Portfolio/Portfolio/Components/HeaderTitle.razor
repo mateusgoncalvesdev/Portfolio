@@ -1,0 +1,29 @@
+﻿@inject IJSRuntime JSRuntime
+@inject IPersonalService PersonalService
+
+@if (PersonalInfo == null)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <RadzenText class="title-text" Text="@PersonalInfo.Name.FullName" TextStyle="Radzen.Blazor.TextStyle.DisplayH3"></RadzenText>
+    <RadzenText Text="@PersonalInfo.ProfessionalSummary.Full" TextStyle="Radzen.Blazor.TextStyle.H5" class="mt-5 title-text"></RadzenText>
+    <RadzenStack class="export-ignore" JustifyContent="JustifyContent.Center" AlignItems="AlignItems.End">
+        <RadzenButton Click="ExportToPdf" Text="Salvar como PDF" Icon="picture_as_pdf" ButtonStyle="ButtonStyle.Info" />
+    </RadzenStack>
+}
+
+@code {
+    public PersonalInfo PersonalInfo { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        PersonalInfo = await PersonalService.GetPersonalInfoAsync();
+    }
+
+    private async Task ExportToPdf()
+    {
+        await JSRuntime.InvokeVoidAsync("generatePdf", "conteudo-pdf", "curriculo.pdf");
+    }
+}

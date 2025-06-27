@@ -1,0 +1,35 @@
+﻿@inject IEducationService EducationService
+
+<RadzenCard id="formacao">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Formação Acadêmica" CollapseTitle="Formação Acadêmica">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="school" Title="Formação Acadêmica" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (AcademicQualifications == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <ul>
+                    @foreach(var education in AcademicQualifications)
+                    {
+                        <li><RadzenText TextStyle="TextStyle.Body1">@education.Course. @education.Institution, @education.Status.</RadzenText></li>
+                    }
+                </ul>
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<EducationInfo> AcademicQualifications { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AcademicQualifications = await EducationService.GetEducationAsync();
+    }
+}

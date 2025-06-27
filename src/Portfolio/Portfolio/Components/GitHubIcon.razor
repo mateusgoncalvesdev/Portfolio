@@ -1,0 +1,25 @@
+﻿@inject IPersonalService PersonalService
+
+@if (GitHub == null)
+{
+    <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" ProgressBarStyle="ProgressBarStyle.Primary" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    <RadzenLink Path="@GitHub" Target="_blank">
+        <iconify-icon icon="logos:github-icon" width="@Width" style="display:inline-block;background:white; border-radius:50%; padding:1px;"></iconify-icon>
+    </RadzenLink>
+}
+
+@code {
+    [Parameter]
+    public int Width { get; set; }
+
+    public string GitHub { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var personal = await PersonalService.GetPersonalInfoAsync();
+        GitHub = personal.GitHub;
+    }
+}

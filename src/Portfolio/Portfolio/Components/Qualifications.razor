@@ -1,0 +1,38 @@
+﻿@using Portfolio.Data.Mapper
+@inject IQualificationService QualificationService
+
+
+<RadzenCard id="qualifications">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Qualificações Complementares" CollapseTitle="Qualificações Complementares">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="verified" Title="Qualificações Complementares" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (QualificationInfos == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <ul>
+                    @foreach (var qualification in QualificationInfos)
+                    {
+                        <li><RadzenText TextStyle="TextStyle.Body1">@qualification.Description</RadzenText></li>
+                    }
+                </ul>
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<QualificationViewModel> QualificationInfos { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var qualifications = await QualificationService.GetQualificationsAsync();
+        QualificationInfos = qualifications?.Select(QualificationMapper.MapToViewModel).ToList() ?? [];
+    }
+}

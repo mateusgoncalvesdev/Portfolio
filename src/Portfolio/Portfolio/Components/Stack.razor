@@ -1,0 +1,37 @@
+﻿@inject IStackService StackService
+
+<RadzenCard id="stack">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Tecnologias & Experiência Arquitetural" CollapseTitle="Tecnologias & Experiência Arquitetural">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="code" Title="Tecnologias & Experiência Arquitetural" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" Wrap="FlexWrap.Wrap">
+                @if (TechnologyInfos == null)
+                {
+                    <p><em>Carregando...</em></p>
+                }
+                else
+                {
+                    foreach (var skill in TechnologyInfos)
+                    {
+                        <RadzenBadge IsPill="true" Variant="Variant.Outlined" BadgeStyle="BadgeStyle.Primary">
+                            <span class="badge-text">@skill.Name</span>
+                        </RadzenBadge>
+                    }
+                }
+            </RadzenStack>
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<TechnologyInfo> TechnologyInfos { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        TechnologyInfos = await StackService.GetStackAsync();
+    }
+}

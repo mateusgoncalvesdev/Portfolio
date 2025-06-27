@@ -1,0 +1,15 @@
+﻿@inject IJSRuntime Js
+
+<RadzenText TextStyle="TextStyle.Body1">
+    <strong>Telefone:</strong> <span id="whatsappText">[Carregando...]</span>
+</RadzenText>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Js.InvokeVoidAsync("injectWhatsappText", "whatsappText");
+        }
+    }
+}

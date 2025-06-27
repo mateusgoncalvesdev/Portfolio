@@ -1,0 +1,57 @@
+﻿@inject IPersonalService PersonalService
+@inject ILocationService LocationService
+
+<RadzenCard id="contato">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Contato" CollapseTitle="Contato">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="call" Title="Contato" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (LocationInfo == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <RadzenStack Orientation="Orientation.Vertical">
+                    <RadzenText TextStyle="TextStyle.Body1">
+                        <strong>Email:</strong> <RadzenLink Path="@($"mailto:{Email}")" Target="_blank">@Email</RadzenLink>
+                    </RadzenText>
+                        <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal">
+                        <WhatsAppText />
+                        <WhatsAppIcon Width="20" />
+                    </RadzenStack>
+                    <RadzenText TextStyle="TextStyle.Body1">
+                        <strong>GitHub:</strong> <RadzenLink Path="@GitHub" Target="_blank">@GitHub</RadzenLink>
+                    </RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1">
+                        <strong>Endereço:</strong> @LocationInfo.City, @LocationInfo.State - @LocationInfo.Country
+                    </RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1">
+                        <strong>Idade:</strong> @Age anos
+                    </RadzenText>
+                </RadzenStack>
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public LocationInfo LocationInfo { get; set; } = null!;
+
+    public string Email { get; set; } = "[Carregando...]";
+    public string GitHub { get; set; } = "[Carregando...]";
+    public int Age { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var personal = await PersonalService.GetPersonalInfoAsync();
+        LocationInfo = await LocationService.GetLocationAsync();
+
+        Email = personal.Email;
+        GitHub = personal.GitHub;
+        Age = DateTime.UtcNow.Year - personal.BirthYear;
+    }
+}

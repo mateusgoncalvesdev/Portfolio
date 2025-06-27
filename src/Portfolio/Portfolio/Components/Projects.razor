@@ -1,0 +1,54 @@
+﻿@inject IProjectService ProjectService
+
+<RadzenCard id="projetos">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Projetos" CollapseTitle="Projetos">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="deployed_code" Title="Projetos" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (ProjectInfos == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                foreach (var project in ProjectInfos)
+                {
+                    <RadzenCard>
+                        <RadzenLink Path="@project.GithubUrl" Target="_blank">
+                            <RadzenText TextStyle="TextStyle.H5">@project.Name</RadzenText>
+                        </RadzenLink>
+                        <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><strong>@project.Description</strong></RadzenText>
+                        </RadzenCard>
+                        <RadzenStack Gap="0.5rem">
+                            <RadzenText>@project.Details</RadzenText>
+                            <RadzenStack Gap="0.5rem" AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal">
+                                <RadzenLink Path="@project.NugetUrl" Target="_blank">
+                                    <RadzenText TextStyle="TextStyle.Overline">NuGet.org</RadzenText>
+                                </RadzenLink>
+                                <RadzenText>|</RadzenText>
+                                <RadzenLink Path="@project.GithubUrl" Target="_blank">
+                                    <iconify-icon icon="logos:github-icon" width="20" style="display:inline-block;background:white; border-radius:50%; padding:1px;"></iconify-icon>
+                                </RadzenLink>
+                                <RadzenText>|</RadzenText>
+                                <RadzenText TextStyle="TextStyle.Overline">Licença: @project.License</RadzenText>
+                            </RadzenStack>
+                        </RadzenStack>
+                    </RadzenCard>
+                }
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<ProjectInfo> ProjectInfos { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ProjectInfos = await ProjectService.GetProjectsAsync();
+    }
+}

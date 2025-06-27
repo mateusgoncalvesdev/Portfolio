@@ -1,0 +1,57 @@
+﻿@using Portfolio.Data.Mapper
+@inject IProfessionalExperienceService ProfessionalExperienceService
+
+<style>
+    .rz-grid-table {
+        width: unset;
+    }
+</style>
+
+<RadzenCard id="experiencia">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Experiência Profissional" CollapseTitle="Experiência Profissional">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="work" Title="Experiência Profissional" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (ProfessionalExperienceInfos == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <RadzenDataGrid
+                        AllowColumnResize="true" ShowHeader="false"
+                        Responsive="true"
+                        AllowGrouping="false"
+                        AllowSorting="true"
+                        ExpandMode="DataGridExpandMode.Multiple"
+                        Data="@ProfessionalExperienceInfos"
+                        TItem="ProfessionalExperienceViewModel">
+                    <Template Context="item">
+                        <RadzenCard>
+                            <RadzenText TextStyle="TextStyle.H5">Principais atividades</RadzenText>
+                            <RadzenText Style="white-space: normal; max-width: 100%; display: block; word-wrap: break-word;" TextStyle="TextStyle.Body1">@item.KeyResponsibilities</RadzenText>
+                        </RadzenCard>
+                    </Template>
+                    <Columns>
+                        <RadzenDataGridColumn Property="@nameof(ProfessionalExperienceViewModel.Period)" Title="Período" Sortable="true" SortProperty="@nameof(ProfessionalExperienceViewModel.StartYear)" SortOrder="SortOrder.Descending" />
+                        <RadzenDataGridColumn Property="@nameof(ProfessionalExperienceViewModel.Company)" Title="Empresa" />
+                        <RadzenDataGridColumn Width="100%" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Property="@nameof(ProfessionalExperienceViewModel.Position)" Title="Cargo" />
+                    </Columns>
+                </RadzenDataGrid>
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<ProfessionalExperienceViewModel> ProfessionalExperienceInfos { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var experiences = await ProfessionalExperienceService.GetProfessionalExperiencesAsync();
+        ProfessionalExperienceInfos = experiences?.Select(ProfessionalExperienceMapper.MapToViewModel).ToList() ?? [];
+    }
+}

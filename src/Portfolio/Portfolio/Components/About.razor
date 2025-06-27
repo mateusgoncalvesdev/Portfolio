@@ -1,0 +1,31 @@
+﻿@inject IAboutService AboutService
+
+<RadzenCard id="sobre">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Sobre Mim" CollapseTitle="Sobre Mim">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="badge" Title="Sobre Mim" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (AboutInfo == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <RadzenText TextStyle="TextStyle.Body1">@AboutInfo.Description</RadzenText>
+
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public AboutInfo AboutInfo { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AboutInfo = await AboutService.GetAboutAsync();
+    }
+}
