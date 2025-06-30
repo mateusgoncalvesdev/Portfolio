@@ -13,6 +13,7 @@
   "ASP.NET Core Identity",
   "SignalR",
   "SQL Server",
+  "SQLite",
   "Swagger",
   "RabbitMQ",
   "Clean Architecture",
