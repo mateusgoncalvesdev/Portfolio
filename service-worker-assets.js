@@ -65,7 +65,7 @@
       "url": "js\/contact-inject.js"
     },
     {
-      "hash": "sha256-xJFD\/fvOwqMHcfnAv\/\/ULVOuGiqOfYv4iLMu1db4S6o=",
+      "hash": "sha256-e6BF2U36J9E\/H7niF2+mTnfaIN+8ial4dmbHMSK2e1Q=",
       "url": "js\/pdf-export.js"
     },
     {
@@ -105,7 +105,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-fo+A4WQuJEI21xh\/V6v1IgnwoE2XAiEmeASaZSgWn2c=",
+      "hash": "sha256-y9Rznk44TMOKJ7NsZj\/rZOqgmuTMqlbVDbqGvRARK84=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -173,7 +173,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-CapK\/\/2lRWyYVbu5K3vGLMmsKpIVVSUcuz1Ca1s5LSs=",
+      "hash": "sha256-Gzkwa9OmsGqh\/G9HEPu0IpzIWjiiZypjvphkxAzjXvA=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -485,5 +485,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "ri0plzCo"
+  "version": "PaohK3w2"
 };

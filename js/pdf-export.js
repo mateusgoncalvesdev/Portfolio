@@ -5,9 +5,9 @@
     const clone = original.cloneNode(true);
 
     clone.querySelectorAll('.export-ignore').forEach(el => el.remove());
-
     clone.classList.add('light-mode');
 
+    // Substitui ícones
     clone.querySelectorAll('iconify-icon').forEach(el => {
         const iconName = el.getAttribute('icon');
         if (!iconName) return;
@@ -24,6 +24,12 @@
         el.replaceWith(img);
     });
 
+    clone.querySelectorAll('.avoid-break').forEach(el => {
+        el.style.breakInside = 'avoid';
+        el.style.pageBreakInside = 'avoid';
+        el.style.display = 'block';
+    });
+
     const opt = {
         margin: 0.5,
         filename: filename || 'documento.pdf',
@@ -32,8 +38,5 @@
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf()
-        .set(opt)
-        .from(clone)
-        .save();
+    html2pdf().set(opt).from(clone).save();
 };
