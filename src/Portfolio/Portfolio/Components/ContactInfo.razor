@@ -24,6 +24,9 @@
                         <WhatsAppIcon Width="20" />
                     </RadzenStack>
                     <RadzenText TextStyle="TextStyle.Body1">
+                        <strong>LinkedIn:</strong> <RadzenLink Path="@LinkedIn" Target="_blank">@LinkedIn</RadzenLink>
+                    </RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1">
                         <strong>GitHub:</strong> <RadzenLink Path="@GitHub" Target="_blank">@GitHub</RadzenLink>
                     </RadzenText>
                     <RadzenText TextStyle="TextStyle.Body1">
@@ -43,6 +46,7 @@
 
     public string Email { get; set; } = "[Carregando...]";
     public string GitHub { get; set; } = "[Carregando...]";
+    public string LinkedIn { get; set; } = "[Carregando...]";
     public int Age { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -52,6 +56,7 @@
 
         Email = personal.Email;
         GitHub = personal.GitHub;
+        LinkedIn = personal.LinkedIn;
         Age = DateTime.UtcNow.Year - personal.BirthYear;
     }
 }

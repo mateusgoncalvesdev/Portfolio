@@ -9,6 +9,6 @@ public class PersonalService(HttpClient httpClient) : IPersonalService
 
     public Task<PersonalInfo> GetPersonalInfoAsync()
     {
-        return _httpClient.GetFromJsonAsync<PersonalInfo>("data/personal.json")!;
+        return _httpClient.GetFromJsonAsync<PersonalInfo>("data/personal.json?v=2")!;
     }
 }
