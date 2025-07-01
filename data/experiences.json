@@ -4,27 +4,121 @@
     "endDate": null,
     "company": "Grupo SUED'S",
     "position": "Programador de Sistemas",
-    "keyResponsibilities": "Desenvolvimento autônomo de plataforma corporativa em C# Blazor, integrando APIs e webservices fiscais. Criação de robôs automatizados para monitoramento e autocorreção de falhas em sistema legado. Implementação de módulos em PHP para geração de SPED Fiscal e EFD Contribuições, criação de algoritmos baseados em histórico para análise e tratamento automático de dados de estoque."
+    "mainActivities": [
+      "Desenvolvimento autônomo de plataforma corporativa paralela em .NET Blazor com SignalR e RabbitMQ.",
+      "Integração de sistemas legados em PHP com APIs fiscais e automações inteligentes.",
+      "Criação de bots para correção automática de inconsistências fiscais e de estoque.",
+      "Desenvolvimento de módulos em PHP para SPED Fiscal e EFD Contribuições, interoperando com a plataforma moderna."
+    ],
+    "achievements": [
+      "Superou limitações técnicas impostas por código legado, introduzindo uma camada moderna desacoplada.",
+      "Redução drástica de trabalho manual com bots que automatizam processos críticos (rejeições, correções, reemissões).",
+      "Aumento da produtividade e confiança técnica, ganhando autonomia mesmo em ambiente limitado à inovação."
+    ],
+    "technologiesAndMethods": [
+      ".NET",
+      "Blazor",
+      "SignalR",
+      "RabbitMQ",
+      "PHP",
+      "APIs REST",
+      "Scrum",
+      "Automação de Processos",
+      "Web Scraping",
+      "SPED",
+      "Integração SEFAZ"
+    ]
   },
   {
     "startDate": "2020-09-01T00:00:00",
     "endDate": "2021-08-02T00:00:00",
     "company": "Dominus Sistemas Inteligentes",
     "position": "Desenvolvedor de Sistemas",
-    "keyResponsibilities": "Participação em projetos de sistemas desktop e web, com atuação na coleta, análise e modelagem de dados. Desenvolvimento de funcionalidades sob demanda, correção de falhas e manutenção evolutiva de soluções em nuvem voltadas à gestão empresarial."
+    "mainActivities": [
+      "Liderança técnica em refatoração e reengenharia de sistemas ERP.",
+      "Desenvolvimento e manutenção de soluções fiscais, incluindo integração ACBR.",
+      "Criação de serviço de atualização automática para sistemas desktop legados.",
+      "Implantação de práticas modernas como versionamento, microsserviços e automação."
+    ],
+    "achievements": [
+      "Redução de 90% nos custos com bibliotecas fiscais ao substituir ferramentas pagas por ACBR.",
+      "Padronização e estabilização do ciclo de vida de versões com sistema de update automatizado.",
+      "Prolongamento do sistema legado com integração modular via WebSocket e serviços modernos."
+    ],
+    "technologiesAndMethods": [
+      "C#",
+      ".NET",
+      "VB.NET",
+      "MAUI",
+      "Blazor",
+      "WPF",
+      "ACBR",
+      "SQL Server",
+      "EF Core",
+      "WebSocket",
+      "Clean Architecture",
+      "DDD",
+      "Scrum",
+      "SOLID",
+      "CI/CD"
+    ]
   },
   {
     "startDate": "2020-01-09T00:00:00",
     "endDate": "2020-06-29T00:00:00",
     "company": "Diamante Sistemas",
     "position": "Programador de Sistemas",
-    "keyResponsibilities": "Atuação no suporte técnico a usuários finais e na implantação de sistemas ERP. Responsável pela análise e correção de falhas, otimização de desempenho de bancos de dados (SQL Server, Firebird), migração de dados legados e desenvolvimento de funcionalidades para sistemas desktop e nuvem."
+    "mainActivities": [
+      "Desenvolvimento de funcionalidades para sistemas ERP em .NET e VB.NET.",
+      "Suporte técnico de segundo nível e análise de falhas em produção.",
+      "Criação de solução em nuvem para backup automatizado de arquivos fiscais.",
+      "Projeto de microsserviço para envio confiável de e-mails via Azure."
+    ],
+    "achievements": [
+      "Eliminação de falhas no envio de e-mails com arquitetura resiliente via Azure.",
+      "Redução de demanda de suporte ao introduzir solução de armazenamento em nuvem.",
+      "Início de uma nova versão do PDV, com arquitetura moderna e desacoplada."
+    ],
+    "technologiesAndMethods": [
+      "C#",
+      "VB.NET",
+      "MAUI",
+      "WPF",
+      "WinForms",
+      "GitHub",
+      "Azure Blob Storage",
+      "Microsserviços",
+      "SOLID",
+      "SQL Server",
+      "Entity Framework"
+    ]
   },
   {
     "startDate": "2018-04-06T00:00:00",
     "endDate": "2018-12-17T00:00:00",
     "company": "Dominus Sistemas Inteligentes",
-    "position": "Técnico de Manutenção Eletrônica",
-    "keyResponsibilities": "Responsável pela infraestrutura de TI da empresa, incluindo manutenção de servidores e redes. Auxílio no desenvolvimento de soluções personalizadas, suporte técnico remoto e presencial, e atendimento a chamados com foco na resolução ágil de problemas de software e hardware."
+    "position": "Técnico de Manutenção Eletrônica (função real: Suporte Técnico/Desenvolvedor)",
+    "mainActivities": [
+      "Implantação de servidores, sistemas ERP e políticas de segurança (Windows).",
+      "Treinamento e suporte a usuários, implantação de bases de dados e serviços.",
+      "Desenvolvimento pontual de funcionalidades em .NET mesmo fora da função formal."
+    ],
+    "achievements": [
+      "Agilidade na implantação de sistemas e infraestrutura em clientes.",
+      "Início da carreira como desenvolvedor mesmo sem o reconhecimento contratual.",
+      "Base técnica consolidada em ambientes corporativos de TI e ERP."
+    ],
+    "technologiesAndMethods": [
+      "C#",
+      "WPF",
+      "Windows Services",
+      "SQL Server",
+      "Firebird",
+      "Implantação",
+      "Infraestrutura",
+      "Treinamento",
+      "Suporte Técnico",
+      "SCRUM"
+    ]
   }
 ]
