@@ -9,8 +9,16 @@
       "url": "data\/about.json"
     },
     {
+      "hash": "sha256-ZGBdR9upcRYDDM1DgzPi4Aequ75V7JC93wYzdZZrSCQ=",
+      "url": "data\/courses.json"
+    },
+    {
       "hash": "sha256-EFeQA4ylm2MHNsHFTrLlazPzNhHgGIws32pm5aCmADA=",
       "url": "data\/education.json"
+    },
+    {
+      "hash": "sha256-7IP8EgUhpZN6Ew887ZBcl\/2EJ3j2aLmPtQ9NVa6Wf5w=",
+      "url": "data\/experiences.json"
     },
     {
       "hash": "sha256-1wE3UK81xz4GxZYJo8rTLJEFi1Fr7c+GbroEnbZEu0k=",
@@ -21,15 +29,11 @@
       "url": "data\/personal.json"
     },
     {
-      "hash": "sha256-aihp01w8nS+Z6F7oIQBbB5w6rI1XBY0AU5D87M88XTs=",
-      "url": "data\/professional-experiences.json"
-    },
-    {
       "hash": "sha256-\/awttla6wlmtGBSuqZzA4p1j69UDxUhLJkXRUdECqyI=",
       "url": "data\/projects.json"
     },
     {
-      "hash": "sha256-t36KYTsmRoCcnmTpqZPAVvtmbrYGd6FQdSP6mdwN8uU=",
+      "hash": "sha256-EABZhJJhmRlaVjq8oLoOQ125kpLEuP9CTkP+7kChy7E=",
       "url": "data\/qualifications.json"
     },
     {
@@ -105,7 +109,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-y9Rznk44TMOKJ7NsZj\/rZOqgmuTMqlbVDbqGvRARK84=",
+      "hash": "sha256-LZKisDNX0PAI7ZhoC2zTgcpNU4dVZZfcvbaPoUkw27g=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -173,7 +177,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-Gzkwa9OmsGqh\/G9HEPu0IpzIWjiiZypjvphkxAzjXvA=",
+      "hash": "sha256-jKNqZ0WHXm14pMqKMXFKnej1L3pgUVcN4UqRFluiKho=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -265,7 +269,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-22U2LSBOAIg\/MuDAvkSBPGPBb2Pvq1l815WicODT0Qg=",
+      "hash": "sha256-yRY8Hi1nzeJXCcwECk9GFrjEHBm6wES+HjhO8moBHaA=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -485,5 +489,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "PaohK3w2"
+  "version": "ybaM4Jmb"
 };
