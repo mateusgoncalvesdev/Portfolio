@@ -38,7 +38,9 @@ public static class ProfessionalExperienceMapper
         {
             Company = experience.Company,
             Position = experience.Position,
-            KeyResponsibilities = experience.KeyResponsibilities,
+            MainActivities = experience.MainActivities,
+            Achievements = experience.Achievements,
+            TechnologiesAndMethods = experience.TechnologiesAndMethods,
             StartDate = startDate,
             EndDate = experience.EndDate,
             Period = period,

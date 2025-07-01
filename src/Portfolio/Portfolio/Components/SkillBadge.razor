@@ -1,0 +1,8 @@
+﻿<RadzenBadge IsPill="true" BadgeStyle="BadgeStyle.Secondary">
+    <span class="badge-text">@Text</span>
+</RadzenBadge>
+
+@code {
+    [Parameter]
+    public string Text { get; set; } = default!;
+}

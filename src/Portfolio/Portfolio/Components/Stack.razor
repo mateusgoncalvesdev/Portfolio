@@ -17,9 +17,7 @@
                 {
                     foreach (var skill in TechnologyInfos)
                     {
-                        <RadzenBadge IsPill="true">
-                            <span class="badge-text">@skill.Name</span>
-                        </RadzenBadge>
+                        <SkillBadge Text="@skill.Name" />
                     }
                 }
             </RadzenStack>

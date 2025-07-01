@@ -8,8 +8,33 @@
         <RadzenText TextStyle="TextStyle.Subtitle1">@Experience.Company</RadzenText>
         <RadzenCard class="avoid-break rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
             <RadzenStack>
-                <RadzenText TextStyle="TextStyle.Subtitle1">Principais Atividades</RadzenText>
-                <RadzenText TextStyle="TextStyle.Body1">@Experience.KeyResponsibilities</RadzenText>
+                <RadzenStack>
+                    <RadzenText TextStyle="TextStyle.Subtitle1">Principais Atividades</RadzenText>
+                    <ul>
+                        @foreach (var atc in Experience.MainActivities)
+                        {
+                            <li><RadzenText TextStyle="TextStyle.Body1">@atc</RadzenText></li>
+                        }
+                    </ul>
+                </RadzenStack>
+                <RadzenStack>
+                    <RadzenText TextStyle="TextStyle.Subtitle1">Resultados e Conquistas</RadzenText>
+                    <ul>
+                        @foreach (var ach in Experience.Achievements)
+                        {
+                            <li><RadzenText TextStyle="TextStyle.Body1">@ach</RadzenText></li>
+                        }
+                    </ul>
+                </RadzenStack>
+                <RadzenStack>
+                    <RadzenText TextStyle="TextStyle.Subtitle1">Tecnologias e Metodologias Aplicadas</RadzenText>
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" Wrap="FlexWrap.Wrap">
+                        @foreach (var skill in Experience.TechnologiesAndMethods)
+                        {
+                            <SkillBadge Text="@skill" />
+                        }
+                    </RadzenStack>
+                </RadzenStack>
             </RadzenStack>
         </RadzenCard>
     </RadzenStack>
