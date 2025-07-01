@@ -1,0 +1,11 @@
+﻿<RadzenStack Orientation="Orientation.Vertical" Gap="1rem">
+    @foreach (var exp in Experiences)
+    {
+        <ExperienceBlock Experience="exp" />
+    }
+</RadzenStack>
+
+@code {
+    [Parameter]
+    public List<ProfessionalExperienceViewModel> Experiences { get; set; } = null!;
+}

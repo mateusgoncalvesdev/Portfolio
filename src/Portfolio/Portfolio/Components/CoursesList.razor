@@ -1,0 +1,18 @@
+﻿<RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
+    <Items>
+        @foreach (var course in Courses)
+        {
+            <RadzenTimelineItem PointVariant="Variant.Flat" PointSize="PointSize.Small" PointStyle="PointStyle.Info">
+                <PointContent><RadzenIcon Icon="check" /></PointContent>
+                <ChildContent>
+                    <CourseBlock Course="course" />
+                </ChildContent>
+            </RadzenTimelineItem>
+        }
+    </Items>
+</RadzenTimeline>
+
+@code {
+    [Parameter]
+    public List<Course> Courses { get; set; } = null!;
+}

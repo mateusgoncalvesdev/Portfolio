@@ -1,11 +1,6 @@
 ﻿@using Portfolio.Data.Mapper
+@inject DeviceService DeviceService
 @inject IProfessionalExperienceService ProfessionalExperienceService
-
-<style>
-    .rz-grid-table {
-        width: unset;
-    }
-</style>
 
 <RadzenCard class="avoid-break" id="experiencia">
     <RadzenFieldset AllowCollapse="true" ExpandTitle="Experiência Profissional" CollapseTitle="Experiência Profissional">
@@ -15,37 +10,33 @@
             </RadzenStack>
         </HeaderTemplate>
         <ChildContent>
-            @if (ProfessionalExperienceInfos == null)
+            @if (Experiences == null)
             {
                 <p><em>Carregando...</em></p>
             }
             else
             {
-                <RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
-                    <Items>
-                        @foreach (var exp in ProfessionalExperienceInfos)
-                        {
-                            <RadzenTimelineItem PointStyle="@(exp.EndDate ==  null ?  PointStyle.Primary :  PointStyle.Base)">
-                                <ChildContent>
-                                    <ExperienceBlock Experience="exp" />
-                                </ChildContent>
-                            </RadzenTimelineItem>
-                        }
-                    </Items>
-                </RadzenTimeline>
+                @if (DeviceService.IsMobile)
+                {
+                    <MobileExperiencesList Experiences="Experiences" />
+                }
+                else
+                {
+                    <ExperiencesList Experiences="Experiences" />
+                }
             }
         </ChildContent>
     </RadzenFieldset>
 </RadzenCard>
 
 @code {
-    public List<ProfessionalExperienceViewModel> ProfessionalExperienceInfos { get; set; } = null!;
+    public List<ProfessionalExperienceViewModel> Experiences { get; set; } = null!;
 
     protected override async Task OnInitializedAsync()
     {
         var experiences = await ProfessionalExperienceService.GetProfessionalExperiencesAsync();
         var experiencesOrdered = experiences.OrderByDescending(x =>
             x.EndDate ?? DateTime.Now);
-        ProfessionalExperienceInfos = experiencesOrdered.Select(ProfessionalExperienceMapper.MapToViewModel).ToList();
+        Experiences = experiencesOrdered.Select(ProfessionalExperienceMapper.MapToViewModel).ToList();
     }
 }

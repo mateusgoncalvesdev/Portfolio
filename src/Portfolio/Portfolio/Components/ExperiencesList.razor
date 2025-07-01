@@ -1,0 +1,17 @@
+﻿<RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
+    <Items>
+        @foreach (var exp in Experiences)
+        {
+            <RadzenTimelineItem PointStyle="@(exp.EndDate ==  null ?  PointStyle.Primary :  PointStyle.Base)">
+                <ChildContent>
+                    <ExperienceBlock Experience="exp" />
+                </ChildContent>
+            </RadzenTimelineItem>
+        }
+    </Items>
+</RadzenTimeline>
+
+@code {
+    [Parameter]
+    public List<ProfessionalExperienceViewModel> Experiences { get; set; } = null!;
+}

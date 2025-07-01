@@ -27,5 +27,6 @@ builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IQualificationService, QualificationService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IStackService, StackService>();
+builder.Services.AddSingleton<DeviceService>();
 
 await builder.Build().RunAsync();

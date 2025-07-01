@@ -1,0 +1,11 @@
+﻿<RadzenStack Orientation="Orientation.Vertical" Gap="1rem">
+    @foreach (var course in Courses)
+    {
+        <CourseBlock Course="course" />
+    }
+</RadzenStack>
+
+@code {
+    [Parameter]
+    public List<Course> Courses { get; set; } = null!;
+}

@@ -1,4 +1,5 @@
 ﻿@using Portfolio.Data.Mapper
+@inject DeviceService DeviceService
 @inject ICourseService CourseService
 
 <RadzenCard class="avoid-break" id="courses">
@@ -15,19 +16,14 @@
             }
             else
             {
-                <RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
-                    <Items>
-                        @foreach (var course in CoursesInfo)
-                        {
-                            <RadzenTimelineItem PointVariant="Variant.Flat" PointSize="PointSize.Small" PointStyle="PointStyle.Info">
-                                <PointContent><RadzenIcon Icon="check" /></PointContent>
-                                <ChildContent>
-                                    <CourseBlock Course="course" />
-                                </ChildContent>
-                            </RadzenTimelineItem>
-                        }
-                    </Items>
-                </RadzenTimeline>
+                @if (DeviceService.IsMobile)
+                {
+                    <MobileCoursesList Courses="CoursesInfo" />
+                }
+                else
+                {
+                    <CoursesList Courses="CoursesInfo" />
+                }
             }
         </ChildContent>
     </RadzenFieldset>

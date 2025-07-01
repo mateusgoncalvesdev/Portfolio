@@ -2,6 +2,8 @@
 @inherits LayoutComponentBase
 @inject CookieThemeService CookieThemeService
 @inject IPersonalService PersonalService
+@inject IJSRuntime JS
+@inject DeviceService DeviceService
 
 <HeadContent>
     <RadzenTheme Theme="standard" />
@@ -61,6 +63,16 @@
     protected override async Task OnInitializedAsync()
     {
         PersonalInfo = await PersonalService.GetPersonalInfoAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var width = await JS.InvokeAsync<int>("getDeviceWidth");
+            DeviceService.SetDeviceType(width);
+            StateHasChanged();
+        }
     }
 
     void SidebarToggleClick()
