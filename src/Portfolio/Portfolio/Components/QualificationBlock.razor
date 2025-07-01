@@ -1,0 +1,11 @@
+﻿<RadzenCard>
+    <RadzenStack>
+        <RadzenText TextStyle="TextStyle.Subtitle1">@Qualification.Title</RadzenText>
+        <RadzenText TextStyle="TextStyle.Body1">@Qualification.Description</RadzenText>
+    </RadzenStack>
+</RadzenCard>
+
+@code {
+    [Parameter]
+    public QualificationInfo Qualification { get; set; } = null!;
+}

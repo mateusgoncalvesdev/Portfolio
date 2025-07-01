@@ -25,6 +25,7 @@ builder.Services.AddScoped<IEducationService, EducationService>();
 builder.Services.AddScoped<IProfessionalExperienceService, ProfessionalExperienceService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IQualificationService, QualificationService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IStackService, StackService>();
 
 await builder.Build().RunAsync();

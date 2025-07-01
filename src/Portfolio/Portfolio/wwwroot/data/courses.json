@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Curso de Auxiliar de Faturamento",
+    "provider": "PRONATEC",
+    "hours": 200,
+    "year": 2014,
+    "completedAt": null
+  },
+  {
+    "title": "Curso de Montador e Reparador de Computadores",
+    "provider": "SENAC",
+    "hours": 160,
+    "year": 2014,
+    "completedAt": null
+  },
+  {
+    "title": "RabbitMQ Training Course - by CloudAMQP",
+    "provider": "CloudAMQP",
+    "year": 2025,
+    "completedAt": "2025-06-29T00:00:00"
+  }
+]

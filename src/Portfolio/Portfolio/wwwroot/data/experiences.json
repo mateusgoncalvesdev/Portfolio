@@ -1,30 +1,30 @@
-﻿[
+[
   {
-    "startYear": 2023,
-    "endYear": null,
-    "company": "Sued's Grupo",
+    "startDate": "2023-10-26T00:00:00",
+    "endDate": null,
+    "company": "Grupo SUED'S",
     "position": "Programador de Sistemas",
     "keyResponsibilities": "Desenvolvimento autônomo de plataforma corporativa em C# Blazor, integrando APIs e webservices fiscais. Criação de robôs automatizados para monitoramento e autocorreção de falhas em sistema legado. Implementação de módulos em PHP para geração de SPED Fiscal e EFD Contribuições, criação de algoritmos baseados em histórico para análise e tratamento automático de dados de estoque."
   },
   {
-    "startYear": 2020,
-    "endYear": 2021,
+    "startDate": "2020-09-01T00:00:00",
+    "endDate": "2021-08-02T00:00:00",
     "company": "Dominus Sistemas Inteligentes",
     "position": "Desenvolvedor de Sistemas",
     "keyResponsibilities": "Participação em projetos de sistemas desktop e web, com atuação na coleta, análise e modelagem de dados. Desenvolvimento de funcionalidades sob demanda, correção de falhas e manutenção evolutiva de soluções em nuvem voltadas à gestão empresarial."
   },
   {
-    "startYear": 2020,
-    "endYear": 2020,
+    "startDate": "2020-01-09T00:00:00",
+    "endDate": "2020-06-29T00:00:00",
     "company": "Diamante Sistemas",
     "position": "Programador de Sistemas",
     "keyResponsibilities": "Atuação no suporte técnico a usuários finais e na implantação de sistemas ERP. Responsável pela análise e correção de falhas, otimização de desempenho de bancos de dados (SQL Server, Firebird), migração de dados legados e desenvolvimento de funcionalidades para sistemas desktop e nuvem."
   },
   {
-    "startYear": 2018,
-    "endYear": 2018,
+    "startDate": "2018-04-06T00:00:00",
+    "endDate": "2018-12-17T00:00:00",
     "company": "Dominus Sistemas Inteligentes",
-    "position": "Auxiliar Técnico de Informática",
+    "position": "Técnico de Manutenção Eletrônica",
     "keyResponsibilities": "Responsável pela infraestrutura de TI da empresa, incluindo manutenção de servidores e redes. Auxílio no desenvolvimento de soluções personalizadas, suporte técnico remoto e presencial, e atendimento a chamados com foco na resolução ágil de problemas de software e hardware."
   }
 ]

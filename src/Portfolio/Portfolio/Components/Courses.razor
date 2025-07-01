@@ -1,0 +1,47 @@
+﻿@using Portfolio.Data.Mapper
+@inject ICourseService CourseService
+
+<RadzenCard class="avoid-break" id="courses">
+    <RadzenFieldset AllowCollapse="true" ExpandTitle="Cursos e Certificações" CollapseTitle="Cursos e Certificações">
+        <HeaderTemplate>
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                <SectionTitle Icon="verified" Title="Cursos e Certificações" />
+            </RadzenStack>
+        </HeaderTemplate>
+        <ChildContent>
+            @if (CoursesInfo == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                <RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
+                    <Items>
+                        @foreach (var course in CoursesInfo)
+                        {
+                            <RadzenTimelineItem PointVariant="Variant.Flat" PointSize="PointSize.Small" PointStyle="PointStyle.Info">
+                                <PointContent><RadzenIcon Icon="check" /></PointContent>
+                                <ChildContent>
+                                    <CourseBlock Course="course" />
+                                </ChildContent>
+                            </RadzenTimelineItem>
+                        }
+                    </Items>
+                </RadzenTimeline>
+            }
+        </ChildContent>
+    </RadzenFieldset>
+</RadzenCard>
+
+@code {
+    public List<Course> CoursesInfo { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var courses = await CourseService.GetCoursesAsync();
+
+        CoursesInfo = courses.OrderByDescending(c =>
+            c.CompletedAt ?? new DateTime(c.Year ?? 1, 12, 31))
+        .ToList();
+    }
+}

@@ -9,6 +9,6 @@ public class ProfessionalExperienceService(HttpClient httpClient) : IProfessiona
 
     public Task<List<ProfessionalExperience>> GetProfessionalExperiencesAsync()
     {
-        return _httpClient.GetFromJsonAsync<List<ProfessionalExperience>>("data/professional-experiences.json")!;
+        return _httpClient.GetFromJsonAsync<List<ProfessionalExperience>>("data/experiences.json")!;
     }
 }

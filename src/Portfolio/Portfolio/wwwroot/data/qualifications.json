@@ -1,26 +1,14 @@
 [
   {
-    "title": "Curso de Auxiliar de Faturamento",
-    "provider": "PRONATEC",
-    "hours": 200,
-    "year": 2014
+    "title": "Inglês Técnico",
+    "description": "Leitura fluente de documentação técnica e interpretação de mensagens de erro, logs e termos técnicos em inglês."
   },
   {
-    "title": "Curso de Montador e Reparador de Computadores",
-    "provider": "SENAC",
-    "hours": 160,
-    "year": 2014
+    "title": "Domínio de documentos fiscais eletrônicos",
+    "description": "Experiência prática com SPED, NFe, NFCe, NFSe, EFD Contribuições e integração fiscal em sistemas corporativos."
   },
   {
-    "title": "Inglês Técnico"
-  },
-  {
-    "title": "Domínio de documentos fiscais eletrônicos: SPED, NFe, NFCe, NFSe"
-  },
-  {
-    "title": "Free RabbitMQ Training Course",
-    "provider": "CloudAMQP",
-    "hours": 4,
-    "year": 2025
+    "title": "CI/CD e DevOps",
+    "description": "pipelines com GitHub Actions e integração contínua no Azure."
   }
 ]

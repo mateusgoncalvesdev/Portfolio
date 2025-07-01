@@ -1,0 +1,19 @@
+﻿<RadzenCard>
+    <RadzenStack>
+        <RadzenText TextStyle="TextStyle.H6">@Course.Title</RadzenText>
+        <RadzenText TextStyle="TextStyle.Subtitle1">@Course.Provider</RadzenText>
+        @if (Course.CompletedAt.HasValue)
+        {
+            <RadzenText TextStyle="TextStyle.Body1">Verificação emitida em: @Course.CompletedAt.Value.ToString("MMM yyyy")</RadzenText>
+        }
+        else if (Course.Year.HasValue)
+        {
+            <RadzenText TextStyle="TextStyle.Body1">Verificação emitida em: @Course.Year</RadzenText>
+        }
+    </RadzenStack>
+</RadzenCard>
+
+@code {
+    [Parameter]
+    public Course Course { get; set; } = null!;
+}

@@ -21,26 +21,18 @@
             }
             else
             {
-                <RadzenDataGrid
-                        AllowColumnResize="true" ShowHeader="false"
-                        Responsive="true"
-                        AllowGrouping="false"
-                        AllowSorting="true"
-                        ExpandMode="DataGridExpandMode.Multiple"
-                        Data="@ProfessionalExperienceInfos"
-                        TItem="ProfessionalExperienceViewModel">
-                    <Template Context="item">
-                        <RadzenCard>
-                            <RadzenText TextStyle="TextStyle.H5">Principais atividades</RadzenText>
-                            <RadzenText Style="white-space: normal; max-width: 100%; display: block; word-wrap: break-word;" TextStyle="TextStyle.Body1">@item.KeyResponsibilities</RadzenText>
-                        </RadzenCard>
-                    </Template>
-                    <Columns>
-                        <RadzenDataGridColumn Property="@nameof(ProfessionalExperienceViewModel.Period)" Title="Período" Sortable="true" SortProperty="@nameof(ProfessionalExperienceViewModel.StartYear)" SortOrder="SortOrder.Descending" />
-                        <RadzenDataGridColumn Property="@nameof(ProfessionalExperienceViewModel.Company)" Title="Empresa" />
-                        <RadzenDataGridColumn Width="100%" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Property="@nameof(ProfessionalExperienceViewModel.Position)" Title="Cargo" />
-                    </Columns>
-                </RadzenDataGrid>
+                <RadzenTimeline Orientation="Orientation.Vertical" LinePosition="LinePosition.Start">
+                    <Items>
+                        @foreach (var exp in ProfessionalExperienceInfos)
+                        {
+                            <RadzenTimelineItem PointStyle="@(exp.EndDate ==  null ?  PointStyle.Primary :  PointStyle.Base)">
+                                <ChildContent>
+                                    <ExperienceBlock Experience="exp" />
+                                </ChildContent>
+                            </RadzenTimelineItem>
+                        }
+                    </Items>
+                </RadzenTimeline>
             }
         </ChildContent>
     </RadzenFieldset>
@@ -52,6 +44,8 @@
     protected override async Task OnInitializedAsync()
     {
         var experiences = await ProfessionalExperienceService.GetProfessionalExperiencesAsync();
-        ProfessionalExperienceInfos = experiences?.Select(ProfessionalExperienceMapper.MapToViewModel).ToList() ?? [];
+        var experiencesOrdered = experiences.OrderByDescending(x =>
+            x.EndDate ?? DateTime.Now);
+        ProfessionalExperienceInfos = experiencesOrdered.Select(ProfessionalExperienceMapper.MapToViewModel).ToList();
     }
 }

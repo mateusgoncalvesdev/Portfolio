@@ -2,10 +2,13 @@
 
 public class ProfessionalExperienceViewModel
 {
-    public string Period { get; set; } = string.Empty;
-    public int StartYear { get; set; }
-    public string Company { get; set; } = string.Empty;
-    public string Position { get; set; } = string.Empty;
-    public string KeyResponsibilities { get; set; } = string.Empty;
+    public string Company { get; set; } = default!;
+    public string Position { get; set; } = default!;
+    public string KeyResponsibilities { get; set; } = default!;
+    public DateTime StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public string Period { get; set; } = default!;
+    public string Duration { get; set; } = default!;
 }
+
 
