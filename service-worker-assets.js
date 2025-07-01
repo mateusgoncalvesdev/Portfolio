@@ -17,7 +17,7 @@
       "url": "data\/education.json"
     },
     {
-      "hash": "sha256-lWdANyHp4qtDAfymAEuArPSWg9dXMuPtjBJBcbYgo8Q=",
+      "hash": "sha256-g0aArPiITkKa2wf4S5ThkjPfnBnAH+hz4TYXUqbMUMQ=",
       "url": "data\/experiences.json"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-zN+VhIE+QABdIExDff4IcbNPc5rHS\/cNd9tsh3sj3wU=",
+      "hash": "sha256-vIoHJMWxtZTbRyIjtMiNsyHlq9DSkj4aIuqFJSrtq5I=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-dd7GAhadahXPF4yM5kX40E2aOkMT26uQafbQPF1p6ac=",
+      "hash": "sha256-orB4MbXL4ms\/NTxRR8QWwhndAEH0SFOS8GT68y72ds0=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -489,5 +489,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "myRcJEJv"
+  "version": "LA6JRkPl"
 };
