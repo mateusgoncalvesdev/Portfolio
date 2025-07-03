@@ -61,7 +61,7 @@
       "url": "icons\/logos-whatsapp-icon.svg"
     },
     {
-      "hash": "sha256-snGUFtJB9caHyq9sIEXXE9fi08W+Kb2nNRxmx2wjIkw=",
+      "hash": "sha256-Zol7K1CWD02JGpXo4P2NmB1+4oVjcGy+09053uOGo\/E=",
       "url": "index.html"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-GK8aR+Fy5kTBAn\/CxQi8s1B+cAqXYNK0BriZZPbAXNY=",
+      "hash": "sha256-X0pxdqe3eL++PJz7+Ykjs+3tePwnzhOZXZqReMS09nY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-jmZp+b5DNdTibnNGAbZ2FFyokhLQPF\/gsx4tpcI5Upo=",
+      "hash": "sha256-SETzRnZTz0+KaPsRsVDrBP+AqyGTw32F8R5magtAxww=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -489,5 +489,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "W2tvjR0E"
+  "version": "faGe1VGq"
 };
