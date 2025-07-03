@@ -1,11 +1,20 @@
-﻿<RadzenPanelMenu>
-    <RadzenPanelMenuItem Icon="home" Text="Home" Path="/Portfolio/" />
-    <RadzenPanelMenuItem Icon="call" Text="Contato" Path="/Portfolio/contact" />
-    <RadzenPanelMenuItem Icon="badge" Text="Sobre Mim" Path="/Portfolio/about" />
-    <RadzenPanelMenuItem Icon="code" Text="Stack Técnica" Path="/Portfolio/stack" />
-    <RadzenPanelMenuItem Icon="work" Text="Experiência" Path="/Portfolio/experience" />
-    <RadzenPanelMenuItem Icon="school" Text="Formação" Path="/Portfolio/education" />
-    <RadzenPanelMenuItem Icon="verified" Text="Cursos e Certificações" Path="/Portfolio/courses" />
-    <RadzenPanelMenuItem Icon="lightbulb" Text="Qualificações" Path="/Portfolio/qualifications" />
-    <RadzenPanelMenuItem Icon="deployed_code" Text="Projetos" Path="/Portfolio/projects" />
+﻿<RadzenPanelMenu Click="NotifyParent">
+    <RadzenPanelMenuItem Icon="call" Text="Contato" Path="#contact" />
+    <RadzenPanelMenuItem Icon="badge" Text="Sobre Mim" Path="#about" />
+    <RadzenPanelMenuItem Icon="code" Text="Stack Técnica" Path="#stack" />
+    <RadzenPanelMenuItem Icon="work" Text="Experiência" Path="#experience" />
+    <RadzenPanelMenuItem Icon="school" Text="Formação" Path="#education" />
+    <RadzenPanelMenuItem Icon="verified" Text="Cursos e Certificações" Path="#courses" />
+    <RadzenPanelMenuItem Icon="lightbulb" Text="Qualificações" Path="#qualifications" />
+    <RadzenPanelMenuItem Icon="deployed_code" Text="Projetos" Path="#projects" />
 </RadzenPanelMenu>
+
+@code {
+    [Parameter]
+    public EventCallback OnItemClicked { get; set; }
+
+    private async Task NotifyParent()
+    {
+        await OnItemClicked.InvokeAsync();
+    }
+}
