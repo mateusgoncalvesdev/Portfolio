@@ -9,7 +9,7 @@
       "url": "data\/about.json"
     },
     {
-      "hash": "sha256-ZGBdR9upcRYDDM1DgzPi4Aequ75V7JC93wYzdZZrSCQ=",
+      "hash": "sha256-+A7eA5RQG4VH0Yu1YsO9ZLijfH4euBfof2t3z1jArIA=",
       "url": "data\/courses.json"
     },
     {
@@ -37,7 +37,7 @@
       "url": "data\/qualifications.json"
     },
     {
-      "hash": "sha256-Jv32dw+FR7CqKUQw3UdSzLs2SHDXxz3SF9f4Q8NFNMQ=",
+      "hash": "sha256-KNDMjjmoqnIu\/KB9mTtxlnMICBnJ8oumN4rQgV5WABk=",
       "url": "data\/stack.json"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-XNtiZbJHOW97ketjr4fM2NvzgG0zu+glQcFipPu7N0M=",
+      "hash": "sha256-Le41cBtiI4pYdJyjIE+86cFjr1EE59fw4TFJnB1PtuY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-\/xLI8rcO7Np6HLXELg4o9549WVU4t0KKCDykwT3as7E=",
+      "hash": "sha256-9WUGlxsIuAocnKfFuz0NtLvrm2co4Krq5rGlU1WfIOw=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -493,5 +493,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "yz\/KW4C\/"
+  "version": "6j4xaLYq"
 };

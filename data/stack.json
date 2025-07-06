@@ -14,6 +14,7 @@
   "SignalR",
   "SQL Server",
   "SQLite",
+  "Redis",
   "Swagger",
   "RabbitMQ",
   "Clean Architecture",
@@ -28,5 +29,6 @@
   "JavaScript",
   "Java",
   "CI/CD",
-  "Scrum"
+  "Scrum",
+  "xUnit"
 ]
