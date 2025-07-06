@@ -1,7 +1,13 @@
 ﻿<RadzenCard>
     <RadzenStack>
-        <RadzenText TextStyle="TextStyle.H6">@Course.Title</RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1">@Course.Provider</RadzenText>
+        <RadzenStack Orientation="Orientation.Horizontal">
+            <RadzenText TextStyle="TextStyle.Subtitle1">@Course.Title</RadzenText>
+            @if (Course.Hours != null)
+            {
+                <RadzenText TextStyle="TextStyle.Body1">@($"({Course.Hours} horas)")</RadzenText>
+            }
+        </RadzenStack>
+        <RadzenText TextStyle="TextStyle.Subtitle2">@Course.Provider</RadzenText>
         @if (Course.CompletedAt.HasValue)
         {
             <RadzenText TextStyle="TextStyle.Body1">Verificação emitida em: @Course.CompletedAt.Value.ToString("MMM yyyy")</RadzenText>

@@ -18,5 +18,12 @@
     "provider": "CloudAMQP",
     "year": 2025,
     "completedAt": "2025-06-29T00:00:00"
+  },
+  {
+    "title": "API Security in the World of DevSecOps",
+    "provider": "APIsec University",
+    "hours": 2,
+    "year": 2025,
+    "completedAt": "2025-07-06T00:00:00"
   }
 ]
