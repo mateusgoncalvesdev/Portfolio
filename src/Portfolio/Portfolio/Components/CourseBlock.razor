@@ -4,7 +4,7 @@
             <RadzenText TextStyle="TextStyle.Subtitle1">@Course.Title</RadzenText>
             @if (Course.Hours != null)
             {
-                <RadzenText TextStyle="TextStyle.Body1">@($"({Course.Hours} horas)")</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1">@($"({Course.Hours}h)")</RadzenText>
             }
         </RadzenStack>
         <RadzenText TextStyle="TextStyle.Subtitle2">@Course.Provider</RadzenText>
