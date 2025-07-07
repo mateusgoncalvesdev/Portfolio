@@ -9,7 +9,7 @@
       "url": "data\/about.json"
     },
     {
-      "hash": "sha256-+A7eA5RQG4VH0Yu1YsO9ZLijfH4euBfof2t3z1jArIA=",
+      "hash": "sha256-EtqHdV1q1RiTsLQaHNmEs2QCJ7nXTrtBcKhT7EOdl6Q=",
       "url": "data\/courses.json"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Le41cBtiI4pYdJyjIE+86cFjr1EE59fw4TFJnB1PtuY=",
+      "hash": "sha256-3iFg7zG+uJFL\/XB\/flgdggK5fNNYyFnoRyVga6we6tw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-9WUGlxsIuAocnKfFuz0NtLvrm2co4Krq5rGlU1WfIOw=",
+      "hash": "sha256-RhvbrAWepcyDCBBixEnKlU9ByK6e2RakDoINq4bg7\/4=",
       "url": "_framework\/Portfolio.wasm"
     },
     {
@@ -493,5 +493,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.min.js"
     }
   ],
-  "version": "6j4xaLYq"
+  "version": "lki7K2oo"
 };
